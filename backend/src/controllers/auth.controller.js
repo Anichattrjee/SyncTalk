@@ -93,7 +93,7 @@ export const signin=async (req,res)=>{
 
 export const signout=(req,res)=>{
     try {
-        res.cookie("token","",{maxAge:0});
+        res.cookie("jwt","",{maxAge:0});
         res.status(400).json({message:"User Signed Out successfully."});
     } catch (error) {
         console.log("Error in signout controller: ",error.message);
